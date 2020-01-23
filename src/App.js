@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
-//import axios from 'axios';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-//import styled from 'styled-components';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from 'styled-components';
 import DropDown from './components/drop-down'
+import Header from './components/header'
 
 function App() {
   // useEffect(() => {
@@ -20,7 +21,7 @@ function App() {
   }
   return (
     <div className="App">
-      <DropDown image={data.image}/>
+      <Header/>
     </div>
   );
 }
