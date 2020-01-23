@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
 import DropDown from './components/drop-down'
 import Header from './components/header'
@@ -12,6 +11,18 @@ function App() {
   //     console.log(res) 
   //   })
   // }, [])
+  const Container = styled.div`
+    width: 100%;
+    height: 100%;
+    postition: fixed;
+    background-image: url("https://thenypost.files.wordpress.com/2019/11/astronaut-87.jpg?quality=80&strip=all");
+  `
+
+  const Background = styled.img`
+    width: 100%;
+    height: 100%;
+  `
+
   const data = {
     image: "https://apod.nasa.gov/apod/image/1203/angrysun_friedman_960.jpg",
     title: "Angry Sun Erupting",
@@ -21,7 +32,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Header/>
+    <Container>
+    <Header/>
+    <DropDown image={data.image}/>
+    </Container>
     </div>
   );
 }
