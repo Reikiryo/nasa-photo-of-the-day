@@ -18,7 +18,7 @@ export default function Header() {
 	return (
 		<HeaderDiv>
 			<HeaderImg src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" />
-			<HeaderH1>Nasa Photos</HeaderH1>
+			<HeaderH1>Nasa's Photo Of The Day</HeaderH1>
 		</HeaderDiv>
 
 	)

@@ -18,11 +18,7 @@ const DateImg = styled.img`
     width: 100%;
     text-align: center;
 `
-const DropDownDiv = styled.div`
-    margin: 0 auto;
-    width: 18%;
-`
-const DropDownH2 = styled.h2`
+const DateH2 = styled.h2`
     text-align: center;
     margin: 2% auto;
     color: white;
@@ -31,6 +27,7 @@ const MoreInfo = styled.div`
     text-align: center;
     color: white;
     font-size: 1rem;
+    bottom: 0;
 `
 
 export default function DropDown(props) {
@@ -39,21 +36,7 @@ export default function DropDown(props) {
 
     return (
         <MainDiv>
-        <DropDownH2>Find Photos By Date</DropDownH2>
-            <DropDownDiv>
-                <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                    <DropdownToggle caret>
-                        Dropdown's menu is right-aligned
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                        <DropdownItem header>Header</DropdownItem>
-                        <DropdownItem disabled>Action</DropdownItem>
-                        <DropdownItem>Another Action</DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>Another Really Really Long Action (Really!)</DropdownItem>
-                    </DropdownMenu>
-                </Dropdown>
-            </DropDownDiv>
+        <DateH2>Find Photos By Date</DateH2>
             <ImageDiv>
                 <DateImg src={props.image} />
             </ImageDiv>

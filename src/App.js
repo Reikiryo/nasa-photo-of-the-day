@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import axios from 'axios';
 import styled from 'styled-components';
-import DropDown from './components/drop-down'
+import Date from './components/date';
 import Header from './components/header'
 
 function App() {
@@ -11,18 +11,6 @@ function App() {
   //     console.log(res) 
   //   })
   // }, [])
-  const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    postition: fixed;
-    background-image: url("https://thenypost.files.wordpress.com/2019/11/astronaut-87.jpg?quality=80&strip=all");
-  `
-
-  const Background = styled.img`
-    width: 100%;
-    height: 100%;
-  `
-
   const data = {
     image: "https://apod.nasa.gov/apod/image/1203/angrysun_friedman_960.jpg",
     title: "Angry Sun Erupting",
@@ -30,12 +18,30 @@ function App() {
     date: "2012-03-14",
     copy: "Alan FriedmanAverted Imagination"
   }
+  const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  postion: absolute;
+  background-image: url("https://thenypost.files.wordpress.com/2019/11/astronaut-87.jpg?quality=80&strip=all");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: auto;
+  background-position: center;
+  background-attachment: fixed;
+`
+
+const Description = styled.div`
+  width: 100%;
+  height: 100vh;
+`
   return (
     <div className="App">
     <Container>
     <Header/>
-    <DropDown image={data.image}/>
+    <Date image={data.image}/>
     </Container>
+    <Description>
+    </Description>
     </div>
   );
 }
