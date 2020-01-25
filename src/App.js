@@ -33,6 +33,7 @@ function App() {
 const Description = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: 
 `
   return (
     <div className="App">
@@ -40,8 +41,7 @@ const Description = styled.div`
     <Header/>
     <Date image={data.image}/>
     </Container>
-    <Description>
-    </Description>
+    <Description/>
     </div>
   );
 }
