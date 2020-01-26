@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import Description from './description'
 
 const MainDiv = styled.div`
     height: 80%;
@@ -57,6 +58,9 @@ export default function DropDown(props) {
         axios.get(api)
         .then(res => {
         console.log(res) 
+        })
+        .catch(err => {
+
         })
     } 
     
